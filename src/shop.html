@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/runa/_head.htm',{
+"title":"Магазин"
+})
+<!-- BODY -->
+<body>
+	<!-- WRAPPER -->
+	<div data-sticky class="wrapper">
+		<!-- HEADER -->
+		@@include('html/runa/_header.htm',{})
+		<!-- MAIN - PAGE -->
+		<main class="page">
+
+			<!-- BREADCRUMS -->
+			<div class="section__container">
+				<ul class="page__breadcrumb">
+					<li><a href="#">Главная</a></li>
+					<li>Магазин</li>
+
+				</ul>
+			</div>
+
+			<!-- SHOP HEADER -->
+			<section class="site-bg section-offset">
+				<div class="section__container ">
+					<!-- SHOP  / TITLE -->
+					<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+						Магазин
+					</h2>
+
+					<!-- SHOP -->
+					<div class="shop__box">
+
+						<div id="my-store-68209762" style="min-height: 400px;" class="ecwid ec-storefront-v2">
+							<script data-cfasync="false" type="text/javascript"
+								src="https://app.ecwid.com/script.js?68209762&amp;data_platform=code&amp;data_date=2023-09-20"
+								charset="utf-8"></script>
+							<script type="text/javascript">
+								window.ec = window.ec || {};
+								window.ec.storefront = window.ec.storefront || {};
+								window.ec.storefront.enable_navigation = true;
+								window.ec.storefront.product_details_layout = "TWO_COLUMNS_SIDEBAR_ON_THE_RIGHT";
+								window.ec.storefront.product_details_gallery_layout = "IMAGE_SINGLE_THUMBNAILS_VERTICAL";
+								window.ec.storefront.product_details_two_columns_with_right_sidebar_show_product_description_on_sidebar = false;
+								window.ec.storefront.product_details_two_columns_with_left_sidebar_show_product_description_on_sidebar = false;
+								window.ec.storefront.product_details_show_product_name = true;
+								window.ec.storefront.product_details_show_breadcrumbs = false;
+								window.ec.storefront.product_details_show_product_sku = true;
+								window.ec.storefront.product_details_show_product_price = true;
+								window.ec.storefront.product_details_show_in_stock_label = false;
+								window.ec.storefront.product_details_show_number_of_items_in_stock = false;
+								window.ec.storefront.product_details_show_qty = false;
+								window.ec.storefront.product_details_show_wholesale_prices = false;
+								window.ec.storefront.product_details_show_product_options = true;
+								window.ec.storefront.product_details_show_product_description = false;
+								window.ec.storefront.product_details_show_delivery_time = undefined;
+								window.ec.storefront.product_details_show_share_buttons = false;
+								window.ec.storefront.product_details_position_product_name = 100;
+								window.ec.storefront.product_details_position_breadcrumbs = 200;
+								window.ec.storefront.product_details_position_product_sku = 300;
+								window.ec.storefront.product_details_position_product_price = 400;
+								window.ec.storefront.product_details_position_product_options = undefined;
+								window.ec.storefront.product_details_position_buy_button = 600;
+								window.ec.storefront.product_details_position_wholesale_prices = 700;
+								window.ec.storefront.product_details_position_product_description = 800;
+								window.ec.storefront.product_details_position_delivery_time = undefined;
+								window.ec.storefront.product_details_position_share_buttons = 900;
+								window.ec.storefront.product_details_position_subtitle = 500;
+								window.ec.storefront.product_details_show_subtitle = true;
+								xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-68209762");
+							</script>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- PARTNERS -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="publication-selector__title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							партнеры</h2>
+					</div>
+					@@include('html/runa/_partners-slider.htm',{})
+				</div>
+			</section>
+		</main>
+		<!-- FOOTER -->
+		@@include('html/runa/_footer.htm',{})
+	</div>
+	@@include('html/runa/_popup.htm',{})
+	@@include('html/runa/_js.htm',{})
+</body>
+
+</html>

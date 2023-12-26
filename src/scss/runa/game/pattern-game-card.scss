@@ -1,0 +1,194 @@
+// === PATTERN GAME CARD === //
+.pattern-game-card {
+	height: 100%;
+	width: 100%;
+	@include adaptiveValue("min-height", 550, 320, 1400, 768, 1);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	@include adaptiveValue("padding-top", 40, 20, 1400, 768, 1);
+	@include adaptiveValue("padding-bottom", 40, 20, 1400, 768, 1);
+	background-color: $color-base-2;
+	background-image: url("@img/RUNA/patterns/patterns-8.svg");
+	background-size: cover;
+	border-radius: rem(10);
+	overflow: hidden;
+	border: rem(1) solid $color-base-1;
+	transition: all 0.5s ease 0s;
+
+	// = HOVER = //
+	&:hover {
+		transition: all 0.5s ease 0s;
+	}
+
+	// = BODY = //
+	&__body {
+	}
+	// = HEADER = //
+	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 700;
+		color: $white;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 48, 30, 1400, 768, 1);
+		@include adaptiveValue("line-height", 56, 36, 1400, 768, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 30, 20, 767.98, 400, 1);
+			@include adaptiveValue("line-height", 32, 24, 767.98, 400, 1);
+		}
+	}
+
+	&__subtitle {
+		width: fit-content;
+		margin: 8px 0px 10px 0px;
+		padding: 0px 16px 0px 16px;
+		border-radius: rem(5);
+		color: $white;
+		display: flex;
+		font-weight: 700;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 22, 18, 1400, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1400, 768, 1);
+	}
+	&__subtitle-white {
+		width: fit-content;
+		background-color: $white;
+		color: $color-base-2;
+		text-transform: uppercase;
+		margin: 0px 0px 2px 0px;
+		padding: 8px 16px 8px 16px;
+		display: flex;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 22, 18, 1400, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1400, 768, 1);
+		border-radius: rem(5);
+
+		p {
+			color: $color-base-2;
+		}
+	}
+
+	&__date,
+	&__day,
+	&__time {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	// = BORDERS = //
+	&__border {
+		display: inline-block;
+		vertical-align: middle;
+		color: $white;
+		padding: 0px 5px 0px 5px;
+		@include adaptiveValue("font-size", 12, 8, 1920, 768, 1);
+		@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
+	}
+	&__x-border {
+		display: inline-block;
+		vertical-align: middle;
+		color: $white;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 20, 16, 1920, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1920, 768, 1);
+		padding: 0px 20px 0px 20px;
+		@media (max-width: $tablet) {
+			padding: 0px 8px 0px 8px;
+		}
+	}
+
+	// = SCORE = //
+	&__score {
+		display: inline-block;
+		vertical-align: middle;
+		color: $white;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 48, 24, 1400, 768, 1);
+		@include adaptiveValue("line-height", 56, 32, 1400, 768, 1);
+		padding: 0px 6px 0px 6px;
+	}
+	&__score-dark {
+		color: $color-base-2;
+	}
+
+	// = TEAMS = //
+	&__teams {
+		padding: 0px 24px 10px 24px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $tablet) {
+			padding: 0px 16px 10px 16px;
+		}
+		@media (max-width: rem(549.98)) {
+			gap: rem(10);
+		}
+	}
+
+	&__team-home,
+	&__team-away {
+		@include adaptiveValue("width", 120, 64, 1400, 768, 1);
+		@include adaptiveValue("height", 120, 64, 1400, 768, 1);
+		border-radius: rem(100);
+		background-color: $white;
+		overflow: hidden;
+	}
+
+	&__team-home img,
+	&__team-away img {
+		padding: 8px;
+	}
+
+	// = FOOTER = //
+	&__footer {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(20);
+	}
+
+	// = TOURNAMENT & GYM = //
+	&__tournament,
+	&__gym {
+		width: 100%;
+		color: $white;
+		text-align: center;
+		font-weight: 400;
+		span {
+			margin: 10px 0px 0px 0px;
+			text-transform: uppercase;
+			@include adaptiveValue("font-size", 16, 14, 1400, 768, 1);
+			@include adaptiveValue("line-height", 22, 20, 1400, 768, 1);
+		}
+	}
+	&__tournament-dark {
+		width: 100%;
+		color: $color-base-2;
+		text-align: center;
+		font-weight: 400;
+		span {
+			margin: 10px 0px 0px 0px;
+			text-transform: uppercase;
+			@include adaptiveValue("font-size", 16, 14, 1400, 768, 1);
+			@include adaptiveValue("line-height", 22, 20, 1400, 768, 1);
+		}
+	}
+}
+
+.pattern-game-card-1 {
+	background-color: $color-base-4;
+	background-image: url("@img/RUNA/patterns/patterns-2.svg");
+}
+.pattern-game-card-2 {
+	background-color: $color-base-4;
+	background-image: url("@img/RUNA/patterns/patterns-3.svg");
+}

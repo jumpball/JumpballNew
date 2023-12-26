@@ -1,0 +1,74 @@
+// === GAME PROFILE BODY === //
+
+.game-profile-body {
+	// = MENU BLOCK = //
+	&__menu-block {
+		//background-color: $white;
+	}
+
+	// = TEAM = //
+
+	&__team {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 10px 0px 10px 0px;
+		//flex-direction: column;
+		@media (max-width: rem(767.98)) {
+			//min-width: rem(170);
+		}
+		@media (max-width: rem(599.98)) {
+			//min-width: 0;
+		}
+	}
+	&__team-left {
+		align-items: center;
+		@media (max-width: rem(449.98)) {
+			grid-column: 1/1 span;
+			grid-row: 1/1 span;
+		}
+	}
+	&__team-right {
+		align-items: center;
+		@media (max-width: rem(449.98)) {
+			grid-column: 2/1 span;
+			grid-row: 1/1 span;
+		}
+	}
+
+	// = TEAM NAME = //
+	&__team-name {
+		margin: 0px 0px 0px 8px;
+	}
+	&__team-name-left {
+		text-align: left;
+	}
+	&__team-name-right {
+		//text-align: center;
+	}
+	&__team-title {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 30, 24, 1600, 992, 1);
+		@include adaptiveValue("line-height", 32, 26, 1600, 992, 1);
+	}
+	&__team-subtitle {
+		color: $gray;
+		@include adaptiveValue("font-size", 15, 14, 1600, 992, 1);
+		@include adaptiveValue("line-height", 18, 17, 1600, 992, 1);
+	}
+
+	// = TEAM LOGO = //
+	&__team-logo {
+		@include adaptiveValue("height", 80, 70, 1600, 992, 1);
+		@include adaptiveValue("width", 80, 70, 1600, 992, 1);
+	}
+	&__team-logo img {
+		padding: rem(5);
+	}
+	&__team-logo-left {
+		//align-self: flex-end;
+	}
+	&__team-logo-right {
+		//align-self: flex-start;
+	}
+}
